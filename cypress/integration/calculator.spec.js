@@ -72,7 +72,7 @@ it('should be able to clear the running total without affecting the calculation'
   cy.get('#number2').click();
   cy.get('#clear').click();
   cy.get('#operator-equals').click();
-  cy.get('.display').should('contain', '9')
+  cy.get('.display').should('contain', '8')
 })
 
 
