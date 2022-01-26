@@ -63,19 +63,6 @@ it('should be able to chain multiple operations together', () => {
   cy.get('.display').should('contain', '19')
 })
 
-it('should be able to clear the running total without affecting the calculation', () => {
-  cy.get('#number3').click();
-  cy.get('#operator_add').click();
-  cy.get('#number3').click();
-  cy.get('#operator-equals').click();
-  cy.get('#operator_add').click();
-  cy.get('#number2').click();
-  cy.get('#clear').click();
-  cy.get('#operator-equals').click();
-  cy.get('.display').should('contain', '8')
-})
-
-
 it('should output correctly for positive numbers', () => {
   cy.get('#number2').click();
   cy.get('#operator_add').click();
